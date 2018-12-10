@@ -157,7 +157,7 @@ class MainController extends Controller
         if($vote != null){
             $em->remove($vote);
             $em->flush();
-            $this->get('session')->getFlashBag()->add('notice','Votre précédent vote à été effacé !');    
+            $this->get('session')->getFlashBag()->add('notice','Votre précédent vote a été effacé !');    
         }
 
         if($subject){
@@ -182,7 +182,7 @@ class MainController extends Controller
                 $em->flush();
 
                 //Flash message
-                $this->get('session')->getFlashBag()->add('notice','Merci de votre vote. Le résultat sera affiché sur cette page lors de la cloture du vote.');
+                $this->get('session')->getFlashBag()->add('notice','Merci de votre vote. Le résultat sera affiché sur cette page lors de la clôture du vote.');
 
                 //redirect to subject
                 return $this->redirect($this->generateUrl("glukose_enjolras_oneSubject", array('idSubject' => $subject->getId())));               
