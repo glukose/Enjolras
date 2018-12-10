@@ -119,7 +119,7 @@
                             {% endif %}
                     
                             &nbsp;&nbsp; ---------- &nbsp;&nbsp;
-                            <a class="btn btn-info" href="{{ path('glukose_enjolras_cloture_vote', {'idSubject' : object.id}) }}"><i class="fa fa-check"></i> Cloturer le vote </a>
+                            <a class="btn btn-info" href="{{ path('glukose_enjolras_cloture_vote', {'idSubject' : object.id}) }}"><i class="fa fa-check"></i> Clôturer le vote </a>
 
                             {% if admin.isAclEnabled() and admin.hasroute('acl') and admin.isGranted('MASTER', object) %}
                                 <a class="btn btn-info" href="{{ admin.generateObjectUrl('acl', object) }}"><i class="fa fa-users"></i> {{ 'link_edit_acl'|trans({}, 'SonataAdminBundle') }}</a>
